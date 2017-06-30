@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{% block title '' %} - Consultores</title>
+    {% block css %}
+        <link href="{{ asset('css/IWComun.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/IWHeaderFooter.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('jquery-ui/jquery-ui.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/ja-main.css') }}" rel="stylesheet" type="text/css" />
+    {% endblock %}
+    {% block javascripts %}
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script src="{{ asset('jquery-ui/jquery-ui.min.js') }}"></script>
+        <script src="{{ asset('jquery-ui/i18n/datepicker-es.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        {#            <script src="{{ asset('js/modernizr-2.0.6.min.js') }}"></script>#}
+    {% endblock %}
+    <script>
+       /* $(document).ready(function() {
+            $(".js-datepicker").datepicker();
+        });*/
+    </script>
+  </head>
+  <body>
+    <header>
+
+      <div id="content-header">
+        <div id="header">
+          <div id="header-user">
+            <div id="header-session">
+              <a href="https://www.indraweb.net" class="header-login" alt="salir">salir</a>
+            </div>
+            {% if app.user.roles is defined and 'ROLE_ADMIN' in app.user.roles %}
+                <div id="header-admin">
+                  <a href="{{ path('admin_user_list') }}"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
+                </div>
+            {% endif %}
+            <div id="header-userdata">
+              <ul id="header-userlist">
+                <li class="header-userlist-name">
+                  {% if app.user.fullname is defined  %}
+                      <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                      {{ app.user.fullname }}
+                  {% endif %}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- título de la app -->
+      <div id="content-sis">
+        <div class="iwTituloAplicacion">
+          <div>consultores comerciales</div>
+        </div>
+        <nav class="menu-main">
+          {% block mainmenu %}
+              {# <ul>
+                <li><a href="{{ url('homepage') }}"{{ global.request.uri == url('homepage')? ' class="current"' }}>Inicio</a></li>
+                <li><a href="{{ url('consultant_list') }}"{{ global.request.uri == url('consultant_list')? ' class="current"' }}>Consultores</a></li>
+                <li><a href="{{ url('accord_list') }}" {{ global.request.uri == url('accord_list')? ' class="current"' }}>Contratos</a></li>
+                <li><a href="{{ url('service_list') }}"{{ global.request.uri == url('service_list')? ' class="current"' }}>Peticiones de Servicios</a></li>
+                <li><a href="{{ url('accord_history') }}"{{ global.request.uri == url('accord_history')? ' class="current"' }}>Histórico</a></li>
+              </ul> #}
+          {% endblock %}
+          {% block backlink %}
+              <div class="back"><a href="javascript:history.go(-1)" class="volver"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Volver</a></div>
+          {% endblock %}
+        </nav>
+      </div>
+      <!-- CONTENIDO -->
+
+      {#      <nav id="access" role="navigation">
+                <p>
+                    <a href="{{ url('homepage') }}" class="volver">Inicio</a>
+                </p>
+            </nav>#}
+
+    </header>
+
+    <div class="container">
+      {% block content %} {% endblock %}
+    </div>
+    <!-- Inicio del pie de página -->
+    <div id="footer" class="externalApps">
+      <div id="footer-legalinfo">
+        <a target="_blank" href="http://www.indracompany.com/" class="footer-legalinfo-logo">Indra</a>
+        <ul id="footer-copyright">
+          <li>© Indra 2016</li>
+        </ul>
+      </div>
+    </div>
+    {# {% block javascripts_footer %}
+        <script>
+            var ldapUrl = "{{ url('ldap') }}";
+        </script>
+    {% endblock %} #}
+  </body>
+</html>

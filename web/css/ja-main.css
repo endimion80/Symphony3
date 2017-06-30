@@ -1,0 +1,522 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background: #F5F5F5;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+}
+
+.container {
+    background-color: #FFFFFF;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+#content-sis {
+    margin: 0;
+    padding: 0 20px;
+    position: relative;
+}
+h1 {
+    font-size: 1.3em;
+    font-weight: 400;
+    border-left-width: 6px;
+    border-left-style: solid;
+    border-left-color: #E21776;
+    padding-left: 7px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+h1.center-uppercase{
+    text-align: center;
+    /*text-transform: uppercase;*/
+    border: none;
+    padding: 0;
+    margin-bottom: 10px
+}
+h4 {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom-width: thin;
+    border-bottom-style: dotted;
+    border-bottom-color: #999;
+    margin-bottom: 15px;
+    padding-bottom: 0px;
+}
+tbody,input,option,select{
+    /*text-transform: uppercase;*/
+}
+.admin tbody, .admin input,.admin inputoption,.admin input select{
+    text-transform: none;
+}
+
+
+/** FORMULARIOS **/
+.menu-main{
+    /*float: left;*/
+}
+.menu-main li{
+    display: inline;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+.menu-main li a.current{
+    color: #666;
+}
+.back{
+    float: right;
+    position: relative;
+    right: 25px;
+    top: -25px;
+}
+div.extension-with-texarea .ui-front{
+    height: 85px;
+}
+/** ----------- **/
+
+/** FORMULARIOS **/
+label {
+    display: block;
+    font-weight: normal;
+}
+label.required:after {
+    content: " *";
+    color: red;
+}
+.form-inline {
+    float: left;
+    margin-right: 30px;
+}
+input[type="submit"] {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    /*text-transform: uppercase;*/
+    color: #FFFFFF;
+    background-color: #00b0ca;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+input[type="submit"], input[type="button"] {
+    padding: 0.5em 1em;
+    line-height: 1em;
+    cursor: pointer;
+    border-radius: 0px;
+    color: #fff;
+    font-size: inherit;
+    border: solid 1px #00b0ca;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.0);
+    background-position: center bottom;
+    margin-top: 20px;
+}
+legend {
+    width: auto;
+    padding: 5px;
+    margin-bottom: 0px;
+    border: none;
+    font-size: 1.2em;
+    /*font-weight: bold;*/
+}
+fieldset {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #F0FAFF;
+}
+.inline-input .form-group {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    margin-right: 20px;
+}
+
+.collection-header{
+    padding-left: 37px; 
+}
+.collection-header div{
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.admin input{
+    text-transform: none;
+}
+
+.delete-confirmation{
+    width: 600px;
+    margin: 30px auto;
+    text-align: center;
+}
+.cancel-btn{
+    background-color: #00b0ca;
+    color: #fff;
+    border-radius: 0;
+    margin-top: 20px;
+    font-size: inherit;
+    line-height: 1em;
+}
+/** ---------- **/
+
+
+
+
+/** jplist **/
+button.jplist-reset-btn {
+    width: 125px;
+}
+span.search-input-button {
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+.search-input-button .jplist-select {
+    margin: 0 10px 0 0;
+}
+.search-input-button .option-default{
+    color: #ccc;
+}
+
+/** ------ **/
+
+
+/** otros **/
+
+.volver {
+    padding-left: 20px;
+    color: #00b0ca;
+    font-size: 1.2em;
+}
+h1 span{
+    font-size: 0.8em;
+    color: #888;
+}
+
+.space-bar{
+    padding: 5px 10px;
+}
+.prueba{
+    background: #B0413E;
+}
+.ui-autocomplete-loading {
+    background: white url("../images/ui-anim_basic_16x16.gif") right center no-repeat;
+}
+
+.icon-delete{
+    background: white url("../images/icon/ico-eliminar-min.png") right center no-repeat;
+}
+.icon-delete-gray{
+    background: white url("../images/icon/ico-eliminar-min-gris.png") right center no-repeat;
+    padding: 10px;
+}
+.icon-see{
+    background: white url("../images/icon/ico-ver-min.png") right center no-repeat;
+    padding: 0 10px;
+}
+.icon-add{
+    background: white url("../images/icon/ico-anadir.png") right center no-repeat;
+    padding: 0 0px 0 15px;
+}
+.icon-edit-consultant{
+    background: white url("../images/icon/ico-editar-consultor.png") right center no-repeat;
+    padding: 0 10px;
+}
+.icon-docu{
+    background: white url("../images/icon/ico-descargar-documento-min.png") right center no-repeat;
+    padding: 0 10px;
+}
+.item-delete a.icon-delete{
+    background: white url("../images/icon/ico-delete-24.png") right center no-repeat;
+    margin: 1px 5px 3px 2px;
+    padding: 5px 20px 5px 4px;
+}
+a.icon-delete{
+    padding: 0 10px;
+}
+
+.item-delete{
+    float: left;
+    margin-right: 5px;
+}
+.item-delete.noshow{
+    display: none;
+}    
+div.item-add{
+    clear: both;
+    margin: 10px 10px 20px 35px;
+}
+div.item-add.noshow{
+    display: none;
+}
+div.item-add a{
+    background: white url("../images/icon/ico-add-24.png") left center no-repeat;
+    margin: 1px 5px 3px 2px;
+    padding: 5px 20px 3px 4px;
+    text-decoration: none;
+}
+#collection-3 > div.item-add a{
+    background: #00b0ca url("../images/icon/ico-add-24.png") no-repeat scroll left center;
+    color: #fff;
+    margin: 1px 5px 3px 2px;
+    padding: 8px 20px 9px 22px;
+    text-decoration: none;
+}
+#collection-3 >  div.item-add a:before{
+    content: "Añadir extensión";
+}
+#collection-3 > div.item-add {
+    margin: 20px auto 20px auto;
+    width: 200px;
+}
+div.item-add a.vinculated:before{
+    content: "vincular";
+    padding-left: 25px;
+    font-size: 0.8em;
+    color: #666;
+
+}
+a.icon-edit {
+    background: white url("../images/icon/ico-editar-min.png") left center no-repeat;
+    padding: 0 10px;
+}
+/** Menú botones **/
+.menu-button{
+    text-align: right;
+}
+.menu-button div{
+    display: inline;
+    margin-left: 20px;
+}
+.button-add, .button-export {
+    background: #00b0ca;
+    padding: 7px 10px;
+    width: 200px;
+    height: 35px;
+}
+.form-inline.button-add {
+    background: #00b0ca;
+    padding: 7px 10px;
+    width: 200px;
+    height: 35px;
+    margin-top: 19px;
+}
+.button-add a, .button-export a{
+    color: #fff;
+    text-decoration: none;
+    /*    text-transform: uppercase;*/
+}
+.button-add span, .button-export span{
+    color: #fff;
+}
+
+/** ------------- **/
+
+.item-collection{
+    clear: both;
+    margin-top: 10px;
+}
+
+div.submit{
+    margin-top: 20px 
+}
+
+ul.ui-autocomplete {
+    height: 300px;
+    width: 500px;
+    overflow-y: auto;
+    border: solid 1px #ccc;
+    position: relative;
+}
+
+.nobullet{
+    list-style-type: none;
+}
+
+/* EXTENSIONES */
+.extension-item{
+    height: 30px;
+    float: left;
+    margin-bottom: 10px;
+}
+.extension-header {
+    margin: 10px 10px 10px 38px;
+}
+.extension-header div{
+    width: 217px;
+    display: inline-block;
+}
+.extension-validity{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.extension-validity-accord{
+    border-radius: 50%;
+    bottom: -25px;
+    height: 14px;
+    margin: 5px;
+    position: relative;
+    width: 14px;
+}
+.extension-validity-global{
+    border-radius: 50%;
+    height: 14px;
+    margin: 5px;
+    width: 14px;
+}
+.service-validity{
+    display: inline-block;
+}
+.service-validity p{
+    font-size: 0.8em;
+    margin-top: -5px;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.collapse-extension {
+    margin: 0 0 90px;
+    border: solid 1px #666;
+    padding: 10px;
+}
+.collapse-extension h3, .collapse-extension label {
+    font-size: 14px;
+    color: #000;
+    border-left: solid 12px #555;
+    padding-left: 10px;
+}
+.extension .single-document{
+    padding: 0 40px;
+}
+/* CONSULTORES */
+.signerconsultant-values{
+    height: 20px;
+    margin: 0 10px;
+}
+.signerconsultant-header{
+    height: 20px;
+    margin-left: 40px;
+    font-weight: bold;
+}
+.signerconsultant-values div, .signerconsultant-header div{
+    float: left;
+    margin-right: 15px;
+}
+.signerconsultant-values .name, .signerconsultant-header .name{
+    width: 230px;
+}
+.signerconsultant-values .fax, .signerconsultant-header .fax{
+    width: 100px;
+}
+.signerconsultant-values .phone, .signerconsultant-header .phone{
+    width: 100px;
+}
+.signerconsultant-values .email, .signerconsultant-header .email{
+    width: 220px;
+}
+.signerconsultant-values .mobile, .signerconsultant-header .mobile{
+    width: 100px;
+}
+
+#consultant_documentationRequest .checkbox{
+    display: block;
+}
+
+/* ALERTAS */
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
+    color: #3c763d;
+}
+.alert {
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    padding: 15px;
+}
+/** -------- **/
+
+/** Home **/
+.home-icon{
+    margin: 0px auto 40px;
+    padding: 50px;
+    text-align: center;
+    width: 1000px;
+    height: 400px;
+    font-size: 1.3em;
+}   
+
+.home-icon .icon-consultant,
+.home-icon .icon-accord,
+.home-icon .icon-history,
+.home-icon .icon-service{
+    width: 200px; height: 259px;
+    float: left;
+}
+.home-icon .icon-consultant span,
+.home-icon .icon-accord span,
+.home-icon .icon-history span,
+.home-icon .icon-service span{
+    position: relative;
+    top: 210px;
+}
+.home-icon .icon-consultant{
+    background:  url("../images/icon/transfer.png") center no-repeat;
+}
+
+.home-icon .icon-accord{
+    background:  url("../images/icon/handshake.png") center no-repeat;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.home-icon .icon-service{
+    background:  url("../images/icon/list2.png") center no-repeat;
+}
+.home-icon .icon-history{
+    background:  url("../images/icon/binoculars.png") center no-repeat;
+}
+
+
+/** LISTADOS **/
+span.mount{
+    font-size: 0.8em;
+    display: block;
+}
+.jplist-panel div.text-filter-box{
+    margin: 20px 5px 35px 0;
+}
+/** -------- **/
+
+/** ADMIN **/
+.user-delete-confirmation{
+    margin: 30px auto;
+    width: 500px;
+    text-align: center;
+}
+.user-delete-confirmation a{
+    text-decoration: none;
+}
+
+.user-delete-confirmation .options{
+    margin: 30px
+}
+
+/** -------- **/
+
+/** ERROR **/
+.page-error-message{
+    margin: 30px auto;
+    width: 500px;
+    text-align: center;
+
+}
+/** -------- **/

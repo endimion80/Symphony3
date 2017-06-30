@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'NeoSans';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/AM261__.eot);
+}
+@font-face {
+  font-family: 'NeoSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/AM263__.eot);
+}
+@font-face {
+  font-family: 'NeoSans';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/AM265__.eot);
+}
+@font-face {
+  font-family: 'NeoSans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/AM267__.eot);
+}
+@font-face {
+  font-family: 'NeoSans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('NeoSans Light'), local('NeoSans-Light'), url(../fonts/AM261__.TTF);
+}
+@font-face {
+  font-family: 'NeoSans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NeoSans Regular'), local('NeoSans-Regular'), url(../fonts/AM263__.TTF);
+}
+@font-face {
+  font-family: 'NeoSans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('NeoSans Medium'), local('NeoSans-Medium'), url(../fonts/AM265__.TTF);
+}
+@font-face {
+  font-family: 'NeoSans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('NeoSans Bold'), local('NeoSans-Bold'), url(../fonts/AM267__.TTF);
+}
+
+body{margin: 0;padding: 0;}
+#content{width: 980px;margin: 0 auto;}
+
+.iwTituloAplicacion{height: 36px;overflow: hidden;border-bottom: 1px solid #CCC;font-family: NeoSans;font-size: 16px;font-weight: 700;margin: 20px 0 20px;position: relative;text-transform: uppercase;padding-top: 15px}
+.iwTituloAplicacion>div{font-size: 50px;color: #B8B9BB;font-weight: 700;position: absolute;right: 30px;top: -15px;text-transform: lowercase;}
+.iwTituloAplicacion>.texto_largo{font-size: 20px;top: 8px;right: 0}
