@@ -1,0 +1,30 @@
+ModelBundle\Entity\SignerIndra:
+    type: entity
+    table: signer_indra
+    id:
+        alias:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+    manyToMany:
+        entity:
+            targetEntity: Entity
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: signerIndraAlias
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

@@ -1,0 +1,48 @@
+ModelBundle\Entity\Users:
+    type: entity
+    table: users
+    uniqueConstraints:
+        UNIQ_1483A5E9F85E0677:
+            columns:
+                - username
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        username:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+        password:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: '0'
+        roles:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        enabled:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        fullname:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

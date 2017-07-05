@@ -1,0 +1,131 @@
+ModelBundle\Entity\Consultant:
+    type: entity
+    table: consultant
+    indexes:
+        fk_consultant_entity1_idx:
+            columns:
+                - id
+    uniqueConstraints:
+        consultant_UNIQUE:
+            columns:
+                - consultant
+    id: {  }
+    fields:
+        consultant:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+                comment: 'Nombre del consultor/a'
+        type:
+            type: string
+            nullable: true
+            length: 55
+            options:
+                fixed: false
+        cif:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        fax:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+        phone:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+        email:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+        address:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+        banckCountry:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: banck_country
+        banckEntity:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+            column: banck_entity
+        banckAccount:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+            column: banck_account
+        banckTitular:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+            column: banck_titular
+        banckAddress:
+            type: string
+            nullable: true
+            length: 512
+            options:
+                fixed: false
+            column: banck_address
+        banckIban:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+            column: banck_iban
+        banckBic:
+            type: string
+            nullable: true
+            length: 15
+            options:
+                fixed: false
+            column: banck_bic
+        banksIntermediate:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: banks_intermediate
+        documentationRequest:
+            type: blob
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: documentation_request
+    oneToOne:
+        id:
+            targetEntity: Entity
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

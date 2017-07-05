@@ -8,17 +8,21 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class AccordController extends Controller
 {
     /**
-     * @Route("/list")
+     * @Route("/", name="homepage")
      */
     public function listAction()
     {
-        return $this->render('AppBundle:Accord:list.html.twig', array(
+        /*return $this->render('AppBundle:Accord:list.html.twig', array(
             // ...
-        ));
+        ));*/
+        $em= $this->getDoctrine()->getmanager();
+        $users = $em->getRepository('ModelBundle:Users')->findAll();
+        var_dump($users);
+        die();
     }
 
     /**
-     * @Route("/create")
+     * @Route("/create", name="AccordCreate")
      */
     public function createAction()
     {

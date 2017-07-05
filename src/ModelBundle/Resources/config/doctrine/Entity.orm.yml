@@ -1,0 +1,42 @@
+ModelBundle\Entity\Entity:
+    type: entity
+    table: entity
+    indexes:
+        type:
+            columns:
+                - type
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        type:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+    manyToMany:
+        signerIndraAlias:
+            targetEntity: SignerIndra
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: entity
+            joinTable:
+                name: signer_indra_entity
+                joinColumns:
+                    -
+                        name: entity_id
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: signer_indra_alias
+                        referencedColumnName: alias
+            orderBy: null
+    lifecycleCallbacks: {  }

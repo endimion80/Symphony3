@@ -59,31 +59,21 @@
         </div>
         <nav class="menu-main">
           {% block mainmenu %}
-              {# <ul>
-                <li><a href="{{ url('homepage') }}"{{ global.request.uri == url('homepage')? ' class="current"' }}>Inicio</a></li>
-                <li><a href="{{ url('consultant_list') }}"{{ global.request.uri == url('consultant_list')? ' class="current"' }}>Consultores</a></li>
-                <li><a href="{{ url('accord_list') }}" {{ global.request.uri == url('accord_list')? ' class="current"' }}>Contratos</a></li>
-                <li><a href="{{ url('service_list') }}"{{ global.request.uri == url('service_list')? ' class="current"' }}>Peticiones de Servicios</a></li>
-                <li><a href="{{ url('accord_history') }}"{{ global.request.uri == url('accord_history')? ' class="current"' }}>Histórico</a></li>
-              </ul> #}
+              <ul>
+                <li><a href="{{ url('homepage') }}">Inicio</a></li>
+                <li><a href="{{ url('AccordCreate') }}">Crear coordinardor</a></li>
+              </ul>
           {% endblock %}
           {% block backlink %}
               <div class="back"><a href="javascript:history.go(-1)" class="volver"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Volver</a></div>
           {% endblock %}
         </nav>
       </div>
-      <!-- CONTENIDO -->
-
-      {#      <nav id="access" role="navigation">
-                <p>
-                    <a href="{{ url('homepage') }}" class="volver">Inicio</a>
-                </p>
-            </nav>#}
 
     </header>
 
     <div class="container">
-      {% block content %} {% endblock %}
+      {% block body %} {% endblock %}
     </div>
     <!-- Inicio del pie de página -->
     <div id="footer" class="externalApps">

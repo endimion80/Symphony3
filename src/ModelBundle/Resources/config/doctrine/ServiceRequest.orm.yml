@@ -1,0 +1,117 @@
+ModelBundle\Entity\ServiceRequest:
+    type: entity
+    table: service_request
+    indexes:
+        fk_service_request_accord1_idx:
+            columns:
+                - accord_id
+        fk_service_request_country1_idx:
+            columns:
+                - country_id
+    uniqueConstraints:
+        id_UNIQUE:
+            columns:
+                - id
+    id:
+        requestNumber:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            id: true
+            column: request_number
+    fields:
+        dateRequest:
+            type: date
+            nullable: true
+            column: date_request
+        dateStart:
+            type: date
+            nullable: true
+            column: date_start
+        dateEnd:
+            type: date
+            nullable: true
+            column: date_end
+        state:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        dateState:
+            type: date
+            nullable: true
+            column: date_state
+        coment:
+            type: text
+            nullable: true
+            length: null
+            options:
+                fixed: false
+        location:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        signerConsultant:
+            type: blob
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+                comment: 'Array serializado con los firmantes de las consultoras'
+            column: signer_consultant
+        client:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+        project:
+            type: string
+            nullable: true
+            length: 512
+            options:
+                fixed: false
+        area:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+    oneToOne:
+        accord:
+            targetEntity: Accord
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                accord_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    manyToOne:
+        country:
+            targetEntity: Country
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                country_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        id:
+            targetEntity: Entity
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,67 @@
+ModelBundle\Entity\Accord:
+    type: entity
+    table: accord
+    indexes:
+        fk_accord_entity1_idx:
+            columns:
+                - id
+        fk_accord_consultant1_idx:
+            columns:
+                - consultant_id
+    id: {  }
+    fields:
+        dateSign:
+            type: date
+            nullable: true
+            column: date_sign
+        dateStart:
+            type: date
+            nullable: true
+            column: date_start
+        dateEnd:
+            type: date
+            nullable: true
+            column: date_end
+        signerConsultant:
+            type: blob
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+                comment: 'Array serializado con los firmantes de las consultoras'
+            column: signer_consultant
+        reference:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        company:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+    manyToOne:
+        consultant:
+            targetEntity: Consultant
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                consultant_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    oneToOne:
+        id:
+            targetEntity: Entity
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
