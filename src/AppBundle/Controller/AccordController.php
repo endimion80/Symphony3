@@ -15,10 +15,11 @@ class AccordController extends Controller
         /*return $this->render('AppBundle:Accord:list.html.twig', array(
             // ...
         ));*/
+        $helpers = $this->get("app.helpers");
         $em= $this->getDoctrine()->getmanager();
         $users = $em->getRepository('ModelBundle:Users')->findAll();
         
-        return $this->json($users);
+        return $helpers->json($users);
     }
 
     /**
@@ -50,19 +51,4 @@ class AccordController extends Controller
             // ...
         ));
     }
-    public function json($data){
-        $normalizers = array(new \Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer());
-        $encoders = array("json" =>new \Symfony\Component\Serializer\Encoder\JsonEncoder());
-        
-        $serializer = new \Symfony\Component\Serializer\Serializer($normalizers,$encoders);
-        $json = $serializer->serialize($data, 'json');
-        
-        $response = new \Symfony\Component\HttpFoundation\Response();
-        $response->setContent($json);
-        $response->headers->set("content-type", "application/json");
-        
-        return $response;
-    }
-
-
 }
